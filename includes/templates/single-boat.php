@@ -19,7 +19,7 @@ get_header(); ?>
 
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
     	<div class="post_content mybooking-boats mybooking-boats_post">
-    		<div class="container" tabindex="-1">
+    		<div class="mb-container" tabindex="-1">
 					<div class="mb-row">
 						<div class="mb-col-md-12">
 							<?php echo sea_rent_boat_breadcrumbs(); ?>
@@ -54,9 +54,11 @@ get_header(); ?>
 							<div class="mybooking-boats_card-category">
 								<?php if ( get_post_type( get_the_ID() ) == 'boat' ) {
 									$boat_taxonomy = get_the_terms( get_the_ID(), 'boats' );
-									foreach ( $boat_taxonomy as $boat_tax ) { ?>
-										<span class="mybooking-boats_card-category-item"><?php echo esc_html( $boat_tax->name ); ?></span>
-									<?php }
+									if ( isset( $boat_taxonomy ) && !empty( $boat_taxonomy ) ) {
+										foreach ( $boat_taxonomy as $boat_tax ) { ?>
+											<span class="mybooking-boats_card-category-item"><?php echo esc_html( $boat_tax->name ); ?></span>
+										<?php }
+									}	
 								}?>
 							</div>
 
@@ -129,7 +131,6 @@ get_header(); ?>
     				<div class="mb-col-md-12">
 
 							<!-- Mybooking Boat Calendar -->
-							
 							<?php echo do_shortcode( '[mybooking_rent_engine_product code="' . $boat_details_id . '"]' ); ?>
 
 							<!-- Link pages -->
@@ -144,14 +145,21 @@ get_header(); ?>
 
 							<!-- Footer -->
     					<footer class="entry-footer">
-    						<?php mybooking_entry_footer(); ?>
+    						<?php 
+    						   if (function_exists('mybooking_entry_footer') ):
+    						     mybooking_entry_footer();
+    						   endif;
+    						?>
     					</footer>
     				</div>
     			</div>
     		</div>
 
     		<!-- Posts navigation -->
-    		<?php mybooking_post_nav(); ?>
+    		<?php 
+    		  if (function_exists('mybooking_post_nav') ):
+    		     mybooking_post_nav(); 
+    		  endif; ?>
     	</div>
     </article>
 

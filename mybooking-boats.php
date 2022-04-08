@@ -67,6 +67,38 @@ include_once('includes/boat-metaboxes.php');
  */
 include_once('includes/plugin-breadcrumbs.php');
 
+/**
+ * Add class 'mybooking-product' to custom post type
+ * 
+ * @since 1.0.0
+ */  
+function mybooking_boats_body_class ( $classes ) {
+
+    $classes = [];
+    if ( 'boat' == get_post_type() ):
+        $classes[] = 'mybooking-product';
+    endif;    
+
+    return $classes;
+
+}
+add_filter( 'body_class', 'mybooking_boats_body_class' );
+
+/**
+ * Load microtemplates
+ * 
+ * @since 1.0.0
+ */ 
+function mybooking_boats_include_micro_templates ( $classes ) {
+
+    if ( 'boat' == get_post_type() ):
+        if ( function_exists('mybooking_engine_get_template') ):
+            mybooking_engine_get_template('mybooking-plugin-product-widget-tmpl.php');
+        endif;
+    endif;
+
+}
+add_action( 'wp_footer',  'mybooking_boats_include_micro_templates' );
 
 /**
  * Create sidebars for templates
