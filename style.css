@@ -1,0 +1,442 @@
+/*
+*  MYBOOKING BOATS
+*  -----------------------------------------------------------------------------
+*
+*/
+
+/** FLOATED GRID **/
+
+.mb-row {
+  margin: 0 auto;
+  clear: both;
+}
+
+.mb-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Columns */
+
+[class*='mb-col-sm-'],
+[class*='mb-col-md-'],
+[class*='mb-col-lg-'] {
+  float: left;
+  padding: 0.8rem;
+}
+
+.mb-col-sm-1        { width: 8.33%; }
+.mb-col-sm-2        { width: 16.66%; }
+.mb-col-sm-3        { width: 25%; }
+.mb-col-sm-4        { width: 33.33%; }
+.mb-col-sm-5        { width: 41.66%; }
+.mb-col-sm-6        { width: 50%; }
+.mb-col-sm-7        { width: 58.33%; }
+.mb-col-sm-8        { width: 66.66%; }
+.mb-col-sm-9        { width: 75%; }
+.mb-col-sm-10       { width: 83.33%; }
+.mb-col-sm-11       { width: 91.66%; }
+.mb-col-sm-12       { width: 100%; }
+
+[class*='mb-col-md-'],
+[class*='mb-col-lg-'] {
+  width: 100%;
+} /* Stacked by default on mobile */
+
+@media only screen and ( min-width: 575.98px ) {
+  .mb-col-md-1        { width: 8.33%; }
+  .mb-col-md-2        { width: 16.66%; }
+  .mb-col-md-3        { width: 25%; }
+  .mb-col-md-4        { width: 33.33%; }
+  .mb-col-md-5        { width: 41.66%; }
+  .mb-col-md-6        { width: 50%; }
+  .mb-col-md-7        { width: 58.33%; }
+  .mb-col-md-8        { width: 66.66%; }
+  .mb-col-md-9        { width: 75%; }
+  .mb-col-md-10       { width: 83.33%; }
+  .mb-col-md-11       { width: 91.66%; }
+  .mb-col-md-12       { width: 100%; }
+
+
+  .mb-col-md-offset-1        { margin-left: 8.33%; }
+  .mb-col-md-offset-2        { margin-left: 16.66%; }
+  .mb-col-md-offset-3        { margin-left: 25%; }
+  .mb-col-md-offset-4        { margin-left: 33.33%; }
+  .mb-col-md-offset-5        { margin-left: 41.66%; }
+  .mb-col-md-offset-6        { margin-left: 50%; }
+  .mb-col-md-offset-7        { margin-left: 58.33%; }
+  .mb-col-md-offset-8        { margin-left: 66.66%; }
+  .mb-col-md-offset-9        { margin-left: 75%; }
+  .mb-col-md-offset-10       { margin-left: 83.33%; }
+  .mb-col-md-offset-11       { margin-left: 91.66%; }
+  .mb-col-md-offset-12       { margin-left: 100%; }
+
+  [class*='mb-col'] {
+    padding: 1rem;
+  }
+}
+
+@media only screen and ( min-width: 991.98px ) {
+  .mb-col-lg-1        { width: 8.33%; }
+  .mb-col-lg-2        { width: 16.66%; }
+  .mb-col-lg-3        { width: 25%; }
+  .mb-col-lg-4        { width: 33.33%; }
+  .mb-col-lg-5        { width: 41.66%; }
+  .mb-col-lg-6        { width: 50%; }
+  .mb-col-lg-7        { width: 58.33%; }
+  .mb-col-lg-8        { width: 66.66%; }
+  .mb-col-lg-9        { width: 75%; }
+  .mb-col-lg-10       { width: 83.33%; }
+  .mb-col-lg-11       { width: 91.66%; }
+  .mb-col-lg-12       { width: 100%; }
+
+  .mb-col-lg-offset-1        { margin-left: 8.33%; }
+  .mb-col-lg-offset-2        { margin-left: 16.66%; }
+  .mb-col-lg-offset-3        { margin-left: 25%; }
+  .mb-col-lg-offset-4        { margin-left: 33.33%; }
+  .mb-col-lg-offset-5        { margin-left: 41.66%; }
+  .mb-col-lg-offset-6        { margin-left: 50%; }
+  .mb-col-lg-offset-7        { margin-left: 58.33%; }
+  .mb-col-lg-offset-8        { margin-left: 66.66%; }
+  .mb-col-lg-offset-9        { margin-left: 75%; }
+  .mb-col-lg-offset-10       { margin-left: 83.33%; }
+  .mb-col-lg-offset-11       { margin-left: 91.66%; }
+  .mb-col-lg-offset-12       { margin-left: 100%; }
+
+
+  [class*='mb-col'] {
+    padding: 1.25rem;
+  }
+}
+
+/* Grid Helpers */
+
+.mb-col-right {
+  float: right;
+} /* Flips column order if applied to starting column */
+
+.mb-col-center {
+  float: none;
+  margin: 0 auto;
+} /* Centers column if less than mb-col-*-12 */
+
+
+/* ARCHIVES */
+
+.mybooking-boats_grid {
+  display: flex;
+  justify-content: flex-start;
+	flex-wrap: wrap;
+  margin: 0 0 2rem 0
+}
+
+.mybooking-boats_grid .boat {
+  width: 33%;
+}
+
+@media ( max-width: 575.98px ) {
+	.mybooking-boats_grid {
+		display: block;
+	}
+	.mybooking-boats_grid .boat {
+		width: 100%;
+	}
+}
+
+.mybooking-boats_card {
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
+  box-shadow: 0px 0px 20px #DDD!important;
+  border: 1px solid #DDD;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mybooking-boats_card:hover {
+  box-shadow: 0px 1px 3px #DDD!important;
+}
+
+.mybooking-boats .mybooking-boats_card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem!important;
+}
+
+.mybooking-boats_card-info {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: 1rem;
+} @media ( min-width: 575.98px ) {
+  .mybooking-boats_card-info {
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.mybooking-boats_page-title {
+  color: var(--brand-primary, #333)!important;
+  text-align: center;
+  font-size: 3.2em;
+  font-weight: 800;
+} @media ( min-width: 575.98px ) {
+  .mybooking-boats_page-title {
+    font-size: 4.2em;
+  }
+}
+
+.mybooking-boats_post-header {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #DDD;
+  font-size: 3em;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.mybooking-boats_post-title {
+  margin: 0;
+  font-size: 1.6em;
+  line-height: 1.2;
+}
+
+.mybooking-boats_post-title-link {
+  color: var(--brand-primary, #333)!important;
+  font-weight: 800;
+}
+
+.mybooking-boats_post-title-link:hover {
+  text-decoration: none!important;
+  color: #333!important;
+}
+
+.mybooking-boats_btn-book {
+  background-color: var(--brand-secondary, #333)!important;
+  border: 1px solid var(--brand-secondary, #333)!important;
+  border-radius: 5px;
+  font-size: 0.85em;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 1rem 0 0 0;
+}
+
+.mybooking-boats_btn-book:hover {
+  background-color: var(--brand-primary, #666)!important;
+  border: 1px solid var(--brand-primary, #666)!important;
+  text-decoration: none!important;
+  color: white!important;
+}
+
+.mybooking-boats_post-info {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1rem 0 3rem 0;
+} @media ( min-width: 575.98px ) {
+  .mybooking-boats_post-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.mybooking-boats .post_meta {
+  margin: 0;
+  font-weight: 600;
+}
+
+.mybooking-boats_card-category {
+  font-weight: 800;
+  line-height: 1;
+}
+
+.mybooking-boats_card-category-item {
+  display: inline-block;
+  margin: 0.1rem;
+  color: var(--brand-primary, #333);
+  font-weight: 700;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.mybooking-boats_post .mybooking-boats_card-category-item {
+  margin: 1rem 0;
+  font-size: 1.2em;
+}
+
+.mybooking-boats_categories {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--mb-border-color);
+} @media ( min-width: 991.98px ) {
+  .mybooking-boats_categories {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+.mybooking-boats_categories-title {
+  font-weight: 800!important;
+  font-size: 1.4em;
+  line-height: normal;
+}
+
+.mybooking-boats_categories-title .dashicons {
+  font-size: 1.2em;
+  margin-right: 0.5rem;
+}
+
+.mybooking-boats_categories-list {
+  list-style: none!important;
+  margin-top: 1rem!important;
+  padding: 0!important;
+}
+
+.mybooking-boats_categories-list .cat-item,
+.mybooking-boats_categories-list .cat-item-all {
+  padding: 0.5rem;
+  border-top: 1px solid var(--mb-border-color);
+  font-weight: 800;
+}
+
+.mybooking-boats_categories-list a:hover {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.mybooking-boats_model {
+  font-weight: bold;
+}
+
+.mybooking-boats_post .mybooking-boats_model {
+  font-size: 20px;
+}
+
+.mybooking-boats_engine {
+  font-size: 14px;
+  margin: 0 0 1rem 0;
+}
+
+.mybooking-boats_post .mybooking-boats_engine {
+  font-size: 16px;
+}
+
+.mybooking-boats_details {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  font-weight: bold;
+} @media ( min-width: 575.98px ) {
+  .mybooking-boats_details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.mybooking-boats_post .mybooking-boats_details {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #DDD;
+}
+
+.mybooking-boats_details .dashicons {
+  color: var(--brand-primary, #333);
+}
+
+.mybooking-boats .pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.mybooking-boats .pagination a,
+.mybooking-boats .pagination a:hover {
+    border: none!important;
+}
+
+.mybooking-boats .pagination .page-numbers {
+  font-weight: 800;
+}
+
+.mybooking-boats .page-numbers.current {
+  border: none!important;
+  border-radius: 100%;
+  background-color: var(--brand-primary, #333);
+}
+
+.mybooking-breadcrumb {
+  margin-bottom: 1rem;
+}
+
+.mybooking-breadcrumb_item {
+  font-weight: 800;
+}
+
+.mybooking-breadcrumb_item.current {
+  color: #666;
+}
+
+.mybooking-boats_image-container {
+  margin: 0 0 1rem 0;
+}
+
+.mybooking-boats_image-container img {
+  border-radius: 5px!important;
+}
+
+.mybooking-boats .wp-block-gallery img,
+.mybooking-boats .wp-block-image img {
+  border-radius: 5px;
+}
+
+.mybooking-boats .wp-block-gallery {
+  margin-bottom: 0;
+}
+
+.mybooking-boats_footer-nav {
+  margin-top: 6rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--mb-border-color);
+}
+
+.mybooking-boats_widget-area {
+  margin: 0 0 3rem 0;
+}
+
+.mybooking-boats_single-widget-area {
+  margin: 1rem 0 0 0;
+}
+
+
+/* SINGLE */
+
+.boat-post {
+  padding-top: 0!important;
+}
+
+.boat-image_container {
+  height: 200px;
+  overflow: hidden;
+} @media ( min-width: 575.98px ) {
+  .boat-image_container {
+    height: 500px;
+    overflow: hidden;
+    object-fit: contain;
+  }
+}
+
+.boat-image_container img {
+  width: 100%;
+}
