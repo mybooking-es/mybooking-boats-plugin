@@ -33,11 +33,11 @@ if ( ! defined( 'WPINC' ) ) { die; }
  */
 function mybooking_boat_styles( ) {
 	wp_register_style(
-		'style',
+		'mybooking-boats-styles',
 		plugins_url( '/style.css', __FILE__ )
 	);
 	wp_enqueue_style(
-	 'style',
+	 'mybooking-boats-styles',
 	 plugin_dir_url( __FILE__ ) . 'style.css'
 	);
 }
