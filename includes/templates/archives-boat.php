@@ -48,7 +48,11 @@ get_header(); ?>
 								<!-- Card content -->
 								<div class="mybooking-boats_card">
 
-									<?php the_post_thumbnail(); ?>
+									<div class="mybooking-boats_card-image">
+										<div class="mybooking-boats_card-image-container">
+											<?php the_post_thumbnail(); ?>
+										</div>
+									</div>
 
 									<div class="mybooking-boats_card-body">
 										<div class="mybooking-boats_card-info">

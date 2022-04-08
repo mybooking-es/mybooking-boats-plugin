@@ -156,6 +156,27 @@
   box-shadow: 0px 1px 3px #DDD!important;
 }
 
+.mybooking-boats_card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.mybooking-boats_card-image-container {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+}
+
+.mybooking-boats_card-image-container img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .mybooking-boats .mybooking-boats_card-body {
   display: flex;
   flex-direction: column;
