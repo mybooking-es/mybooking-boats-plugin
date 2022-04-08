@@ -57,9 +57,11 @@ get_header(); ?>
 											<div class="mybooking-boats_card-category">
 												<?php if ( get_post_type( get_the_ID() ) == 'boat' ) {
 													$boat_taxonomy = get_the_terms( get_the_ID(), 'boats' );
-													foreach ( $boat_taxonomy as $boat_tax ) { ?>
-														<span class="mybooking-boats_card-category-item"><?php echo esc_html( $boat_tax->name ); ?></span>
-													<?php }
+													if ( isset( $boat_taxonomy ) && !empty( $boat_taxonomy ) ) {
+														foreach ( $boat_taxonomy as $boat_tax ) { ?>
+															<span class="mybooking-boats_card-category-item"><?php echo esc_html( $boat_tax->name ); ?></span>
+														<?php }
+													}
 												}?>
 											</div>
 										</div>
