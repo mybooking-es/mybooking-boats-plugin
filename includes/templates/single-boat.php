@@ -19,7 +19,7 @@ get_header(); ?>
 
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
     	<div class="post_content mybooking-boats mybooking-boats_post">
-    		<div class="mb-container" tabindex="-1">
+    		<div class="container" tabindex="-1">
 					<div class="mb-row">
 						<div class="mb-col-md-12">
 							<?php echo sea_rent_boat_breadcrumbs(); ?>
