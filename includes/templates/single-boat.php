@@ -42,13 +42,11 @@ get_header(); ?>
 								<?php the_post_thumbnail(); ?>
 							</div>
 
-							<!-- Content -->
-							<div class="entry-content">
-								<?php the_content(); ?>
-							</div>
-						</div>
-
-						<div class="mb-col-md-4">
+							<?php if ( $boat_details_description !='' ) {  ?>
+								<span class="mybooking-boats_description">
+									<?php echo esc_html( $boat_details_description ) ?>
+								</span>
+							<?php } ?>
 
 							<!-- Categories -->
 							<div class="mybooking-boats_card-category">
@@ -58,7 +56,7 @@ get_header(); ?>
 										foreach ( $boat_taxonomy as $boat_tax ) { ?>
 											<span class="mybooking-boats_card-category-item"><?php echo esc_html( $boat_tax->name ); ?></span>
 										<?php }
-									}	
+									}
 								}?>
 							</div>
 
@@ -109,12 +107,12 @@ get_header(); ?>
 										</span>
 									<?php } ?>
 								</div>
+							<?php } ?>
 
-								<?php if ( $boat_details_description !='' ) {  ?>
-									<span class="mybooking-boats_description">
-										<?php echo esc_html( $boat_details_description ) ?>
-									</span>
-								<?php } ?>
+							<?php if ( $boat_details_description !='' ) {  ?>
+								<span class="mybooking-boats_description">
+									<?php echo esc_html( $boat_details_description ) ?>
+								</span>
 							<?php } ?>
 
 							<!-- Widgets bottom -->
@@ -124,14 +122,22 @@ get_header(); ?>
 									 <?php dynamic_sidebar('sidebar-post'); ?>
 								</div>
 							<?php } ?>
+
+							<!-- Content -->
+							<div class="entry-content">
+								<?php the_content(); ?>
+							</div>
+						</div>
+
+						<div class="mb-col-md-4">
+
+								<!-- Mybooking Boat Calendar -->
+								<?php echo do_shortcode( '[mybooking_rent_engine_product code="' . $boat_details_id . '"]' ); ?>
 						</div>
 					</div>
 
     			<div class="mb-row">
     				<div class="mb-col-md-12">
-
-							<!-- Mybooking Boat Calendar -->
-							<?php echo do_shortcode( '[mybooking_rent_engine_product code="' . $boat_details_id . '"]' ); ?>
 
 							<!-- Link pages -->
           		<?php
@@ -145,7 +151,7 @@ get_header(); ?>
 
 							<!-- Footer -->
     					<footer class="entry-footer">
-    						<?php 
+    						<?php
     						   if (function_exists('mybooking_entry_footer') ):
     						     mybooking_entry_footer();
     						   endif;
@@ -156,9 +162,9 @@ get_header(); ?>
     		</div>
 
     		<!-- Posts navigation -->
-    		<?php 
+    		<?php
     		  if (function_exists('mybooking_post_nav') ):
-    		     mybooking_post_nav(); 
+    		     mybooking_post_nav();
     		  endif; ?>
     	</div>
     </article>
