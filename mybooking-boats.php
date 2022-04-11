@@ -5,7 +5,7 @@
  * ---------------------
  *
  * @link              https://mybooking.es
- * @since             1.0.0
+ * @since             1.0.2
  * @package           Mybooking Boats
  *
  * @wordpress-plugin
@@ -70,7 +70,7 @@ include_once('includes/plugin-breadcrumbs.php');
 /**
  * Add class 'mybooking-product' to custom post type
  *
- * @since 1.0.0
+ * @since 1.0.1
  */
 function mybooking_boats_body_class ( $classes ) {
 
@@ -86,13 +86,14 @@ add_filter( 'body_class', 'mybooking_boats_body_class' );
 /**
  * Load microtemplates
  *
- * @since 1.0.0
+ * @since 1.0.1
  */
 function mybooking_boats_include_micro_templates ( $classes ) {
 
     if ( 'boat' == get_post_type() ):
         if ( function_exists('mybooking_engine_get_template') ):
             mybooking_engine_get_template('mybooking-plugin-product-widget-tmpl.php');
+						mybooking_engine_get_template('mybooking-plugin-contact.php');
         endif;
     endif;
 

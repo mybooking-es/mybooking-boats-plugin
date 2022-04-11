@@ -84,30 +84,28 @@ get_header(); ?>
 								</div>
 							<?php } ?>
 
-							<?php if ( $boat_details_places !='' && $boat_details_lenght !='' && $boat_details_width !='' ) {  ?>
-								<div class="mybooking-boats_details">
-									<?php if ( $boat_details_places !='' ) {  ?>
-										<span class="mybooking-boats_places">
-											<span class="dashicons dashicons-groups"></span>
-											<?php echo esc_html( $boat_details_places ) ?>
-										</span>
-									<?php } ?>
+							<div class="mybooking-boats_details">
+								<?php if ( $boat_details_places !='' ) {  ?>
+									<span class="mybooking-boats_places">
+										<span class="dashicons dashicons-groups"></span>
+										<?php echo esc_html( $boat_details_places ) ?>
+									</span>
+								<?php } ?>
 
-									<?php if ( $boat_details_lenght !='' ) {  ?>
-										<span class="mybooking-boats_lenght">
-											<span class="dashicons dashicons-editor-code"></span>
-											<?php echo esc_html( $boat_details_lenght ) ?>
-										</span>
-									<?php } ?>
+								<?php if ( $boat_details_lenght !='' ) {  ?>
+									<span class="mybooking-boats_lenght">
+										<span class="dashicons dashicons-editor-code"></span>
+										<?php echo esc_html( $boat_details_lenght ) ?>
+									</span>
+								<?php } ?>
 
-									<?php if ( $boat_details_width !='' ) {  ?>
-										<span class="mybooking-boats_width">
-											<span class="dashicons dashicons-fullscreen-exit-alt"></span>
-											<?php echo esc_html( $boat_details_width ) ?>
-										</span>
-									<?php } ?>
-								</div>
-							<?php } ?>
+								<?php if ( $boat_details_width !='' ) {  ?>
+									<span class="mybooking-boats_width">
+										<span class="dashicons dashicons-fullscreen-exit-alt"></span>
+										<?php echo esc_html( $boat_details_width ) ?>
+									</span>
+								<?php } ?>
+							</div>
 
 							<?php if ( $boat_details_description !='' ) {  ?>
 								<span class="mybooking-boats_description">
@@ -132,7 +130,11 @@ get_header(); ?>
 						<div class="mb-col-md-4">
 
 								<!-- Mybooking Boat Calendar -->
-								<?php echo do_shortcode( '[mybooking_rent_engine_product code="' . $boat_details_id . '"]' ); ?>
+								<?php if ( $boat_details_id !='' ) {  ?>
+									<?php echo do_shortcode( '[mybooking_rent_engine_product code="' . $boat_details_id . '"]' ); ?>
+								<?php } else { ?>
+									<?php echo do_shortcode( '[mybooking_contact]' ); ?>
+								<?php } ?>
 						</div>
 					</div>
 
