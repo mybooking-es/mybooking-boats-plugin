@@ -1,12 +1,20 @@
 # Mybooking Boats plugin Changelog
 
-### 1.0.2
+## 1.0.3
+
+### Updated
+- Boats loop markup in a separate file
+
+### Added
+- Shortcode to show loop on any page
+
+## 1.0.2
 
 ### Fixed
 - Deleted conditional on boat characteristics
 
 ### Added
-- Prints contact form if no product code available
+- Prints contact form if no product code available on single pages
 
 ## 1.0.1
 

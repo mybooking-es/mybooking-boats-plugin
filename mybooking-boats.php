@@ -4,21 +4,21 @@
  * MYBOOKING BOATS PLUGIN
  * ---------------------
  *
- * @link              https://mybooking.es
- * @since             1.0.2
- * @package           Mybooking Boats
- *
  * @wordpress-plugin
  * Plugin Name:       Mybooking Boats
  * Plugin URI:        https://mybooking.es
  * Description:       Simple plugin to create a Custom Post Type to show boat pages
- * Version:           1.0.0
+ * Version:           1.0.3
  * Author:            Mybooking Team
  * Author URI:        https://mybooking.es
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       mybooking-boats
  * Domain Path:       /languages
+ *
+ * @link              https://mybooking.es
+ * @since             1.0.0
+ * @package           Mybooking Boats
  */
 
 
@@ -67,6 +67,15 @@ include_once('includes/boat-metaboxes.php');
  */
 include_once('includes/plugin-breadcrumbs.php');
 
+
+/**
+ * Includes plugin shortcodes
+ *
+ * @since 1.0.3
+ */
+include_once('includes/plugin-shortcodes.php');
+
+
 /**
  * Add class 'mybooking-product' to custom post type
  *
@@ -82,6 +91,7 @@ function mybooking_boats_body_class ( $classes ) {
 
 }
 add_filter( 'body_class', 'mybooking_boats_body_class' );
+
 
 /**
  * Load microtemplates
@@ -99,6 +109,7 @@ function mybooking_boats_include_micro_templates ( $classes ) {
 
 }
 add_action( 'wp_footer',  'mybooking_boats_include_micro_templates' );
+
 
 /**
  * Create sidebars for templates

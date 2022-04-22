@@ -1,8 +1,12 @@
 <?php
 /**
- * Generate breadcrumbs
+ * BREADCRUMBS
  *
- * @since 1.0.2
+ * @since 1.0.0
+ * @package WordPress
+ * @subpackage Mybooking Boats Plugin
+ * @version 0.0.1
+ *
  * @see https://wordpress.stackexchange.com/a/221476
  *
  * Usage: <?php echo sea_rent_boat_breadcrumbs(); ?>

@@ -1,7 +1,10 @@
 /*
 *  MYBOOKING BOATS
-*  -----------------------------------------------------------------------------
-*
+*  ---------------
+* @version 0.0.2
+* @package WordPress
+* @subpackage Mybooking Boats Plugin
+* @since 1.0.0
 */
 
 /** FLOATED GRID **/
@@ -121,6 +124,10 @@
   margin: 0 auto;
 } /* Centers column if less than mb-col-*-12 */
 
+/* Shortcodes grid */
+.mb-shortcode .container {
+  padding: 0;
+}
 
 /* ARCHIVES */
 
