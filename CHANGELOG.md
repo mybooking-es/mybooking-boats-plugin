@@ -4,6 +4,11 @@
 
 ### Updated
 - Boats loop markup in a separate file
+- Version number on file headers
+
+## Fixed
+- Post content moved above bottom widget area on single
+- Reseted .container padding when nested on a shortcode
 
 ### Added
 - Shortcode to show loop on any page

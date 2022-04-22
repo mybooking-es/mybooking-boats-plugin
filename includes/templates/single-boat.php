@@ -113,6 +113,11 @@ get_header(); ?>
 								</span>
 							<?php } ?>
 
+							<!-- Content -->
+							<div class="entry-content">
+								<?php the_content(); ?>
+							</div>
+
 							<!-- Widgets bottom -->
 
 							<?php if ( is_active_sidebar( 'sidebar-post' ) ) { ?>
@@ -120,11 +125,6 @@ get_header(); ?>
 									 <?php dynamic_sidebar('sidebar-post'); ?>
 								</div>
 							<?php } ?>
-
-							<!-- Content -->
-							<div class="entry-content">
-								<?php the_content(); ?>
-							</div>
 						</div>
 
 						<div class="mb-col-md-4">
