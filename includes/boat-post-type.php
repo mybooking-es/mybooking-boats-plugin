@@ -25,7 +25,7 @@ function mybooking_boat() {
 		'search_items'          => __( 'Search Boat', 'mybooking-boats' ),
 		'not_found'             => __( 'Not found', 'mybooking-boats' ),
 		'not_found_in_trash'    => __( 'Not found in Trash', 'mybooking-boats' ),
-		'featured_image'        => __( 'Boat Image', 'mybooking-boats' ),
+		'featured_image'        => __( 'Boat Catalog Image', 'mybooking-boats' ),
 		'set_featured_image'    => __( 'Set boat image', 'mybooking-boats' ),
 		'remove_featured_image' => __( 'Remove boat image', 'mybooking-boats' ),
 		'use_featured_image'    => __( 'Use as boat image', 'mybooking-boats' ),

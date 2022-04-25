@@ -27,29 +27,6 @@
   */
   function boat_deatils_box( $boat_data ) {
 
-    // Featured image control
-    $boat_details_image = get_post_meta( $boat_data->ID, 'boat-details-image', true );
-    ?>
-      <table class="form-table" style="background-color:#efefef; padding: 10px;">
-      <tbody>
-        <tr>
-          <th scope="row" style="padding-left:10px;">
-            <label for="boat-details-image">Featured image</label>
-          </th>
-          <td>
-            <input
-              type="checkbox"
-              name="boat-details-image"
-              <?php checked( $boat_details_image, 1 ); ?>
-              value="1"
-              id="boat-details-image"
-              class="components-text-control__input">
-              <span class="description"><strong>If checked will show Featured Image in boat page.</strong> Uncheck if you plan to add an image gallery in content area, while keep it in cards.</span>
-          </td>
-        </tr>
-      </table>
-    <?php
-
     // ID field
     $boat_details_id = get_post_meta( $boat_data->ID, 'boat-details-id', true );
     ?>
@@ -221,19 +198,6 @@
         $boat_id
       );
     }
-
-    // Boat ID
-    if (  array_key_exists( 'boat-details-image', $_POST )  ) {
-      $boat_image = ( isset( $_POST['boat-details-image'] ) && '1' === $_POST['boat-details-image'] ) ? 1 : 0;
-      update_post_meta(
-        $boat_data_image,
-        'boat-details-image',
-        $boat_image
-      );
-    }
-
-    // $mytheme_checkbox_value = ( isset( $_POST['mytheme_checkbox_value'] ) && '1' === $_POST['mytheme_checkbox_value'] ) ? 1 : 0; // Input var okay.
-		// update_post_meta( $post_id, 'mytheme_checkbox_value', esc_attr( $mytheme_checkbox_value ) );
 
     // Model
     if (  array_key_exists( 'boat-details-model', $_POST )  ) {

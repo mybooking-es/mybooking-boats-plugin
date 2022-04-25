@@ -37,26 +37,10 @@ get_header(); ?>
 
 						<div class="mb-col-md-8">
 
-							<?php $boat_details_image = get_post_meta( $post->ID, 'boat-details-image', true ); ?>
-							<?php if ( $boat_details_image == 1 ) { ?>
-
-								<!-- Featured image -->
-								<div class="mybooking-boats_image-container">
-									<?php the_post_thumbnail(); ?>
-								</div>
-
-								<!-- Content -->
-								<div class="entry-content">
-									<?php the_content(); ?>
-								</div>
-
-							<?php } else { ?>
-
-								<!-- Content -->
-								<div class="entry-content">
-									<?php the_content(); ?>
-								</div>
-							<?php } ?>
+							<!-- Content -->
+							<div class="entry-content">
+								<?php the_content(); ?>
+							</div>
 
 							<?php if ( $boat_details_description !='' ) {  ?>
 								<span class="mybooking-boats_description">
