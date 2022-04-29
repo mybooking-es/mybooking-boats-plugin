@@ -162,6 +162,28 @@
       </table>
     <?php
 
+    // Height field
+    $boat_details_height = get_post_meta( $boat_data->ID, 'boat-details-height', true );
+    ?>
+      <table class="form-table">
+      <tbody>
+        <tr>
+          <th scope="row">
+            <label for="boat-details-height">Height</label>
+          </th>
+          <td>
+            <input
+              type="text"
+              size="50"
+              name="boat-details-height"
+              value="<?php echo esc_attr( $boat_details_height ); ?>"
+              id="boat-details-height"
+              class="components-text-control__input">
+          </td>
+        </tr>
+      </table>
+    <?php
+
     // Description field
     $boat_details_description = get_post_meta( $boat_data->ID, 'boat-details-description', true );
     ?>
@@ -246,6 +268,16 @@
         $boat_data_id,
         'boat-details-width',
         $boat_width
+      );
+    }
+
+    // Height
+    if (  array_key_exists( 'boat-details-height', $_POST )  ) {
+      $boat_height = sanitize_text_field( $_POST['boat-details-height'] );
+      update_post_meta(
+        $boat_data_id,
+        'boat-details-height',
+        $boat_height
       );
     }
 

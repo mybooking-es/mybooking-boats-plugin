@@ -1,7 +1,7 @@
 /*
 *  MYBOOKING BOATS
 *  ---------------
-* @version 0.0.2
+* @version 0.0.3
 * @package WordPress
 * @subpackage Mybooking Boats Plugin
 * @since 1.0.0
@@ -139,7 +139,7 @@
 }
 
 .mybooking-boats_grid .boat {
-  width: 33%;
+  width: 33.333333333%;
 }
 
 @media ( max-width: 575.98px ) {
@@ -226,6 +226,7 @@
 
 .mybooking-boats_post-title {
   margin: 0;
+  color: var(--brand-primary, #333);
   font-size: 1.6em;
   line-height: 1.2;
 }
@@ -243,12 +244,13 @@
 .mybooking-boats_btn-book {
   background-color: var(--brand-secondary, #333)!important;
   border: 1px solid var(--brand-secondary, #333)!important;
-  border-radius: 5px;
-  font-size: 0.85em;
-  font-weight: 800;
+  border-radius: 5px!important;
+  color: var(--brand-primary, #FFF)!important;
+  font-size: 0.85em!important;
+  font-weight: 700!important;
   text-transform: uppercase;
   text-align: center;
-  padding: 10px 20px;
+  padding: 10px 20px!important;
   margin: 1rem 0 0 0;
 }
 
@@ -342,8 +344,11 @@
 }
 
 .mybooking-boats_model {
-  font-weight: bold;
+  font-weight: bold!important;
 }
+
+
+/* SINGLE */
 
 .mybooking-boats_post .mybooking-boats_model {
   font-size: 20px;
@@ -446,9 +451,6 @@
 .mybooking-boats_single-widget-area {
   margin: 1rem 0 0 0;
 }
-
-
-/* SINGLE */
 
 .boat-post {
   padding-top: 0!important;

@@ -1,5 +1,10 @@
 # Mybooking Boats plugin Changelog
 
+## 1.0.4
+
+### Added
+- Height field and icons on archive and single templates
+
 ## 1.0.3
 
 ### Updated

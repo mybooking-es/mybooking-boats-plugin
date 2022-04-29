@@ -68,6 +68,7 @@ get_header(); ?>
 								$boat_details_places = get_post_meta( $post->ID, 'boat-details-places', true );
 								$boat_details_lenght = get_post_meta( $post->ID, 'boat-details-lenght', true );
 								$boat_details_width = get_post_meta( $post->ID, 'boat-details-width', true );
+								$boat_details_height = get_post_meta( $post->ID, 'boat-details-height', true );
 								$boat_details_description = get_post_meta( $post->ID, 'boat-details-description', true );
 							?>
 
@@ -88,7 +89,7 @@ get_header(); ?>
 								<?php if ( $boat_details_places !='' ) {  ?>
 									<span class="mybooking-boats_places">
 										<span class="dashicons dashicons-groups"></span>
-										<?php echo esc_html( $boat_details_places ) ?>
+										<?php echo esc_html( $boat_details_places ) ?> pax
 									</span>
 								<?php } ?>
 
@@ -105,6 +106,13 @@ get_header(); ?>
 										<?php echo esc_html( $boat_details_width ) ?>
 									</span>
 								<?php } ?>
+
+								<?php if ( $boat_details_height !='' ) {  ?>
+				          <span class="mybooking-boats_height">
+				            <span class="dashicons dashicons-arrow-up-alt"></span>
+				            <?php echo esc_html( $boat_details_height ) ?>
+				          </span>
+				        <?php } ?>
 							</div>
 
 							<?php if ( $boat_details_description !='' ) {  ?>

@@ -20,6 +20,7 @@ defined( 'ABSPATH' ) || exit;
   $boat_details_places = get_post_meta( $post->ID, 'boat-details-places', true );
   $boat_details_lenght = get_post_meta( $post->ID, 'boat-details-lenght', true );
   $boat_details_width = get_post_meta( $post->ID, 'boat-details-width', true );
+  $boat_details_height = get_post_meta( $post->ID, 'boat-details-height', true );
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -83,7 +84,7 @@ defined( 'ABSPATH' ) || exit;
         <?php if ( $boat_details_places !='' ) {  ?>
           <span class="mybooking-boats_places">
             <span class="dashicons dashicons-groups"></span>
-            <?php echo esc_html( $boat_details_places ) ?>
+            <?php echo esc_html( $boat_details_places ) ?> pax
           </span>
         <?php } ?>
 
@@ -100,10 +101,17 @@ defined( 'ABSPATH' ) || exit;
             <?php echo esc_html( $boat_details_width ) ?>
           </span>
         <?php } ?>
+
+        <?php if ( $boat_details_height !='' ) {  ?>
+          <span class="mybooking-boats_height">
+            <span class="dashicons dashicons-arrow-up-alt"></span>
+            <?php echo esc_html( $boat_details_height ) ?>
+          </span>
+        <?php } ?>
       </div>
 
       <!-- Read more -->
-      <a class="mybooking-boats_btn-book" href="<?php the_permalink(); ?>"><?php echo __( 'Book Now','mybooking-boats' ); ?> <span class="dashicons dashicons-arrow-right-alt"></span></a>
+      <a class="button btn btn-choose-product mybooking-boats_btn-book" href="<?php the_permalink(); ?>"><?php echo esc_html_x('Book it!', 'renting_choose_product', 'mybooking') ?></span></a>
     </div>
   </div>
 </article>
