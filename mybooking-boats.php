@@ -8,7 +8,7 @@
  * Plugin Name:       Mybooking Boats
  * Plugin URI:        https://mybooking.es
  * Description:       Simple plugin to create a Custom Post Type to show boat pages
- * Version:           1.0.4
+ * Version:           1.0.5
  * Author:            Mybooking Team
  * Author URI:        https://mybooking.es
  * License:           GPL-2.0+
@@ -85,6 +85,7 @@ function mybooking_boats_body_class ( $classes ) {
 
     if ( 'boat' == get_post_type() ):
         $classes[] = 'mybooking-product';
+        $classes[] = 'mybooking-contact-widget';
     endif;
 
     return $classes;
@@ -103,7 +104,6 @@ function mybooking_boats_include_micro_templates ( $classes ) {
     if ( 'boat' == get_post_type() ):
         if ( function_exists('mybooking_engine_get_template') ):
             mybooking_engine_get_template('mybooking-plugin-product-widget-tmpl.php');
-						mybooking_engine_get_template('mybooking-plugin-contact.php');
         endif;
     endif;
 

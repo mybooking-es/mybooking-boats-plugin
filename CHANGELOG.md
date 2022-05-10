@@ -1,5 +1,11 @@
 # Mybooking Boats plugin Changelog
 
+## 1.0.5
+
+### Fixed
+- Added mybooking-contact-widget class to work integrate contact form when not product code included
+- Contact subject : Post title
+
 ## 1.0.4
 
 ### Added

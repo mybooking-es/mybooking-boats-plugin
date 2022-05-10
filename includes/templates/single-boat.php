@@ -136,7 +136,7 @@ get_header(); ?>
 								<?php if ( $boat_details_id !='' ) {  ?>
 									<?php echo do_shortcode( '[mybooking_rent_engine_product code="' . $boat_details_id . '"]' ); ?>
 								<?php } else { ?>
-									<?php echo do_shortcode( '[mybooking_contact]' ); ?>
+									<?php echo do_shortcode( '[mybooking_contact subject="'.esc_html(get_the_title()).'"]' ); ?>
 								<?php } ?>
 						</div>
 					</div>
