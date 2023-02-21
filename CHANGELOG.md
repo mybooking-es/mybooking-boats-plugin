@@ -1,5 +1,9 @@
 # Mybooking Boats plugin Changelog
 
+## 1.0.6
+
+- Added images gallery
+
 ## 1.0.5
 
 ### Fixed

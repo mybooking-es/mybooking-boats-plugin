@@ -7,6 +7,12 @@
 * @since 1.0.0
 */
 
+:root {
+  /* Color palette */
+  --mb-boat-accent-color: green;
+
+}
+
 /** FLOATED GRID **/
 
 .mb-row {
@@ -469,4 +475,26 @@
 
 .boat-image_container img {
   width: 100%;
+}
+
+/* Carousel */
+.mybooking-boat_carousel {
+  padding-bottom: 3rem;
+}
+
+.mybooking-boat_carousel-img {
+  border-radius: 5px;
+}
+
+.mybooking-boat_carousel .slick-dots {
+  bottom: 1rem;
+}
+
+.mybooking-boat_carousel .slick-dots li button::before {
+  font-size: 15px;
+  color: #666;
+}
+
+.mybooking-boat_carousel .slick-dots li.slick-active button::before {
+  color: var(--brand-primary, var(--mb-boat-accent-color));
 }

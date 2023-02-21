@@ -8,7 +8,7 @@
  * Plugin Name:       Mybooking Boats
  * Plugin URI:        https://mybooking.es
  * Description:       Simple plugin to create a Custom Post Type to show boat pages
- * Version:           1.0.5
+ * Version:           1.0.6
  * Author:            Mybooking Team
  * Author URI:        https://mybooking.es
  * License:           GPL-2.0+

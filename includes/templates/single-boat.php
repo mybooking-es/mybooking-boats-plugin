@@ -34,8 +34,37 @@ get_header(); ?>
 								<h1 class="mybooking-boats_post-header"><?php the_title(); ?></h1>
 							<?php } ?>
 						</div>
-
+					</div>	
+					<div class="mb-row">	
 						<div class="mb-col-md-8">
+
+							<?php
+								$boat_details_gallery = get_post_meta( $post->ID, 'boat-details-gallery-data', true );
+								if ( isset( $boat_details_gallery ) && !empty( $boat_details_gallery ) ) {
+									$boat_details_photos_url_array = $boat_details_gallery['image_url'];
+								}
+								else {
+									$boat_details_photos_url_array = [];
+								}
+								$boat_details_photos_count = sizeof($boat_details_photos_url_array);
+								
+							  if( $boat_details_photos_count !='' ) { ?>
+								  <div class="mybooking-boat_carousel mybooking-product-carousel-inner">
+									  <?php for( $i=0; $i<$boat_details_photos_count; $i++ ) { ?>
+											<div class="mybooking-carousel-item">
+		  									<?php
+		  									    $boat_photo = wp_get_attachment_image(
+		  											$boat_details_photos_url_array[$i],
+		  											'full',
+		  											false,
+		  											['src', 'alt', 'class' => 'mybooking-boat_carousel-img']
+		  										);
+		  										echo wp_kses_post( $boat_photo )
+		                    				?>
+											</div>
+										<?php } ?>
+									</div>
+							<?php } ?>
 
 							<!-- Content -->
 							<div class="entry-content">
